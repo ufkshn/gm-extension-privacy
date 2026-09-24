@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Privacy policy for the GM Chat — Preview Chrome extension: account connection, notifications, local storage and your choices.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>GM Chat — Preview · Privacy policy</title>
+  <style>
+    :root{color-scheme:light;font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#282a42;background:#f6f6fb}
+    *{box-sizing:border-box}body{margin:0}header{background:#282a42;color:#eaeaff;padding:48px max(24px,calc((100vw - 820px)/2)) 40px}
+    .brand{font-weight:750;font-size:21px;margin:0 0 28px}.brand span{color:#ff7723}h1{font-size:clamp(32px,5vw,46px);line-height:1.15;letter-spacing:-.035em;margin:0 0 16px}
+    header p{color:#c4c6dc;margin:0}main{max-width:868px;margin:0 auto;padding:36px 24px 64px}h2{font-size:22px;line-height:1.35;margin:34px 0 12px;letter-spacing:-.02em}p,ul{margin:12px 0}li{margin:8px 0}a{color:#484dbb;text-underline-offset:3px}a:focus-visible{outline:3px solid #595ed8;outline-offset:4px}footer{border-top:1px solid #dcddea;margin-top:36px;padding-top:20px;font-size:14px;color:#656a83}
+  </style>
+</head>
+<body>
+  <header><p class="brand"><span>GM</span> Chat — Preview</p><h1>Privacy policy</h1><p>Last updated: September 24, 2026</p></header>
+  <main>
+    <p>This policy describes how the <strong>GM Chat — Preview</strong> Chrome extension handles information. The extension is provided by Panteon Yazilim Oyun ve Egitim Teknolojileri San. Tic. A.S. (Panteon).</p>
+    <p>This preview connects to a GameMaster (GM) service chosen by you and provides its notification inbox, notification details, read-status updates and an unread toolbar badge. <strong>Chat is not available in this preview.</strong> It does not record meetings, capture audio, or read the contents of other browser tabs.</p>
+
+    <h2>Information the extension uses</h2>
+    <ul>
+      <li><strong>Connection settings:</strong> the GM dashboard and API addresses you enter.</li>
+      <li><strong>Account information:</strong> the name, email address, user ID, organization ID and organization name returned by GM.</li>
+      <li><strong>Authorization information:</strong> device approval codes and access and refresh credentials issued by GM after you authorize the connection. The extension does not collect your GM password or copy your browser login cookies.</li>
+      <li><strong>Notifications:</strong> notification identifiers, titles, messages, creation and read/seen timestamps, related GM links, and notification details returned by your GM API.</li>
+      <li><strong>Your read-status choices:</strong> opening a notification marks it read, and choosing Read all updates the currently displayed unread inbox items in GM.</li>
+    </ul>
+    <p>The connection request also identifies the client as the GM Chrome extension and includes its version. The extension does not include advertising, analytics, tracking pixels or a general browsing-activity log. It does not send notifications or account information to an AI model in this preview.</p>
+
+    <h2>How information is used</h2>
+    <p>Information is used to establish and retain the GM connection, identify your account, show your notifications, synchronize read status and maintain the unread badge. When connected, the extension normally refreshes the inbox approximately once per minute while Chrome is running. Browser sleep or network conditions can delay this refresh.</p>
+    <p>The inbox uses GM's existing last-15-days view. An empty or unavailable inbox is reported in the popup. A cached unread count may remain visible during a connection failure and is identified as potentially out of date.</p>
+
+    <h2>Where information is stored</h2>
+    <p>Your connection settings, account profile, refresh credential and latest notification snapshot are saved in local storage for this Chrome profile. They are not placed in Chrome Sync storage. Short-lived access credentials and pending device-approval state use Chrome's session storage. Storage is restricted to trusted extension contexts.</p>
+    <p>The extension does not independently encrypt its local storage; protection depends on Chrome profile access and your device's operating-system security. Avoid sharing your unlocked browser profile or device with people who should not have access to your GM account.</p>
+    <p>The cached notification snapshot is replaced when the inbox is refreshed. It can remain stored while the browser is offline. Account credentials and the cached inbox remain until you disconnect, uninstall the extension, or the extension detects that your session is no longer valid. Saved server addresses can remain after disconnect so that reconnecting is easier. Pending approval information is session-scoped and subject to the expiry returned by GM.</p>
+
+    <h2>Connections and disclosure</h2>
+    <p>The extension sends account-authorization requests, inbox requests and read-status updates only to the GM API you configure. It requests access to that selected host after you click Connect. Chrome's host permission covers ports on that host. Remote servers must use HTTPS; HTTP is allowed only for a GM development server on the same computer through an exact loopback address.</p>
+    <p>The GM server receives the information needed to respond to these requests, including the connection's network address as part of ordinary network communication. Your organization controls its GM service, account access, server records and server retention. Disconnecting the extension does not delete those server records. Contact your GM administrator for requests concerning them.</p>
+    <p>The extension does not sell user data or transfer it to advertising or analytics services. We do not use extension data for personalized advertising, credit decisions, lending, or purposes unrelated to the features described here.</p>
+
+    <h2>Chrome Web Store Limited Use</h2>
+    <p>Use of information received through this extension is limited to providing the account connection and notification features described in this policy and the store listing. We comply with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+    <p>Transfers outside the GM service you select are limited to circumstances allowed by that policy, such as your explicit consent, a necessary security investigation, compliance with applicable law, or a permitted ownership transfer. Human access is limited to your consent for specific support data, security purposes, legal obligations, or aggregated and anonymized internal operations. The extension has no separate upload or telemetry channel for these purposes.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>Use <strong>Settings → Disconnect this browser</strong> to remove the saved account credentials and notification cache from this Chrome profile.</li>
+      <li>Remove the extension in Chrome to remove its extension storage.</li>
+      <li>Remove its selected-site permission in Chrome to stop its access to that GM API.</li>
+      <li>Ask your GM administrator to revoke the server-side external session or manage your GM account and server records. Disconnecting this browser is not server-side revocation.</li>
+      <li>Contact us to ask about access, correction or deletion of information associated with the extension. Do not send passwords or access credentials.</li>
+    </ul>
+
+    <h2>Changes and future features</h2>
+    <p>We will update this policy when the extension's data practices change and show the revised date above. Chat and any future model processing will require updated disclosures before they are made available. This policy does not claim that those future features are active.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions, contact Panteon at <a href="mailto:info@panteon.games">info@panteon.games</a>. For account access or records in your organization's GM deployment, also contact your GM administrator.</p>
+    <footer>This page concerns the GM Chat — Preview Chrome extension. It contains no forms, cookies, analytics scripts, remote fonts, or embedded third-party content. The hosting service may keep ordinary web-server access logs.</footer>
+  </main>
+</body>
+</html>
